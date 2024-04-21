@@ -1,5 +1,9 @@
 import math
-n = int(input())
+
+inp_file = open("SONGUYENTO.inp")
+out_file = open("SONGUYENTO.out", "w")
+
+n = int(inp_file.readline())
 
 def is_prime(n):
     if n < 2: return False
@@ -15,4 +19,8 @@ def is_prime2(n):
             return False
     return True
 
-print(is_prime2(n))
+out_file.write(str(is_prime2(n)))
+
+# Close
+inp_file.close()
+out_file.close()
