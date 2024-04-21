@@ -6,7 +6,6 @@ n = int(inp_file.readline())
 a = 1
 
 for i in range(1,n+1):
-    print(i)
     a = a*i
 
 out_file.write(str(a))
