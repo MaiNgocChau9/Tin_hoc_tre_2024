@@ -1,10 +1,18 @@
-def so_nguyen_to(n):
-    a = []
-    for i in range(0, n+1):
-        if n % i == 0:
-            a.append(i)
-    if len(a) == 2: return True
-    else: return False
-
+import math
 n = int(input())
-print(so_nguyen_to(n))
+
+def is_prime(n):
+    if n < 2: return False
+    for i in range(2, n):
+        if n % i == 0: 
+            return False
+    return True
+
+def is_prime2(n):
+    if n < 2: return False
+    for i in range(2, int(math.sqrt(n))):
+        if n % i == 0: 
+            return False
+    return True
+
+print(is_prime2(n))
