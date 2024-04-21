@@ -4,7 +4,9 @@ out_file = open("ROOT.out", "w")
 n = int(inp_file.readline())
 a = 1
 
-for i in range(1,n):
+for i in range(1,n+1):
     print(i)
     a = a*i
-print("a",a)
+out_file.write(str(a))
+inp_file.close()
+out_file.close()
