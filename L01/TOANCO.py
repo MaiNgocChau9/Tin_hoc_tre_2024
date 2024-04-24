@@ -1,5 +1,5 @@
 input_file = open("TOANCO.inp")
-output_file = open("TOANCO.out")
+output_file = open("TOANCO.out", "w")
 
 data = input_file.readlines()[0]
 data = data.split()
@@ -13,7 +13,7 @@ for i in range(tong):
     ga = i
     cho = tong - ga
     if ga*2 + cho*4 == chan:
-        output_file.write(str(ga), str(cho))
+        output_file.write(f"{ga} {cho}")
 
 # Close
 input_file.close()
