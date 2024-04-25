@@ -1,9 +1,15 @@
 inp_file = open("FINDMAX.INP")
 out_file = open("FINDMAX.OUT", "w")
 n = int(inp_file.readline())
-danhsachsonguyen = []
-for i in range(n):
-    danhsachsonguyen.append(int(input()))
+
+#* Cách 1:
+# danhsachsonguyen = inp_file.readline().split()
+# for so in range(len(danhsachsonguyen)):
+#     danhsachsonguyen = int(danhsachsonguyen[so])
+
+#* Cách 2:
+danhsachsonguyen = list(map(int, inp_file. readline().split()))
+
 max = danhsachsonguyen[0]
 for i in danhsachsonguyen:
     if i > max:
