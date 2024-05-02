@@ -1,23 +1,10 @@
-"""
-a = "1123345456"
-for gia_tri in range(len(str(a))):
-    for i in range(gia_tri,len(str(a))):
-        s = ""
-        for j in range(gia_tri, i):
-            s += str(a)[j]
-        print(s)
-"""
+def tach_so(a):
+    out = ""
+    for i in range(len(a)):
+        if (i+1)%3 == 0:
+            out += a[i] + ","
+        else: out += a[i]
+    return out[::-1]
 
-a = "1123345456"
-danh_sach = []
-for gia_tri in range(len(str(a))):
-    for i in range(gia_tri,len(str(a))):
-        s = ""
-        for j in range(gia_tri, i):
-            s += str(a)[j]
-        print(s)
-        if s == s[::-1] and s != "":
-            print(True)
-            danh_sach.append(s)
-        else: print(False)
-print(danh_sach)
+a = str(input())[::-1]
+print(tach_so(a))
