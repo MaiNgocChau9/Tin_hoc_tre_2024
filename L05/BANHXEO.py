@@ -2,11 +2,11 @@ open_file = open("BANHXEO.inp")
 out_file = open("BANHXEO.out", "w")
 
 first_line = open_file.readline().split()
-n = int(first_line[0])
+x = int(first_line[0])
 banhxeo = int(first_line[1])
 komua = 0
 
-for i in range(n):
+for i in range(x):
     a = open_file.readline().split()
     b = a[0]
     c = a[1]
