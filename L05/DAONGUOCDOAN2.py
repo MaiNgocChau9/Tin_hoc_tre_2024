@@ -8,18 +8,19 @@ def reverse(lst):
     end = 0
     cnt = 0
     for i in range(n):
-        if lst[i] != lstsort[i]:
-            if start == 0 and cnt == 0:
+        for j in range(n):
+            if lst[i] == lstsort[j]:
+                stt.append(j)
+    
+    for i in range(n):
+        if stt[i] != i:
+            if cnt == 0:
                 start = i
                 cnt += 1
             else:
                 end = i
-        # if lst[i] == lstsort[i]:
-        #     end = i
-        # if i == (len(lst) - 1) and end == 0:
-        #     end = len(lst) - 1
-    
     return [start, end]
+                
 
 open_file = open("DAONGUOCDOAN.inp")
 out_file = open("DAONGUOCDOAN.out", "w")
@@ -28,4 +29,4 @@ ds = open_file.readline().split()
 for i in range(n): ds[i] = int(ds[i])
 result = reverse(ds)
 
-out_file.write(f"{result[0]} {result[1]}")
+out_file.write(f"yes\n{result[0]+1} {result[1]+1}")
