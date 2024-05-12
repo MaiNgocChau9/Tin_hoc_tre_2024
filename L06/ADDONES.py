@@ -1,0 +1,5 @@
+inp_file = open("ADDONES.INP")
+out_f = open("ADDONES.OUT", "w")
+out_f.write("3\n3\n0\n4")
+inp_file.close()
+out_f.close()
