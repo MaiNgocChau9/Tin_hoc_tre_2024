@@ -33,8 +33,8 @@ def submatrix_count(matrix, K):
         sum_freq[cumulative_sum] = sum_freq.get(cumulative_sum, 0) + 1
     return count
 
-input_file = open("submatrix.inp")
-output_file = open("submatrix.out", "w")
+input_file = open("submatrixk.inp")
+output_file = open("submatrixk.out", "w")
 # Read input
 n, m, k = map(int, input_file.readline().split())
 matrix = [list(map(int, input_file.readline().split())) for _ in range(n)]
