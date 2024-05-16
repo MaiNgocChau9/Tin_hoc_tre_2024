@@ -1,5 +1,5 @@
-input_file = open("addones.inp")
-output_file = open("addones.out", "w")
+input_file = open("ADDONES.INP")
+output_file = open("ADDONES.OUT", "w")
 
 MAXR = 200003
 n, k, q = map(int, input_file.readline().split())
