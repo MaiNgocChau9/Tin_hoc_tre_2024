@@ -7,5 +7,5 @@ def generate(current_string, max_long):
     generate(current_string + '0', max_long)
     generate(current_string + '1', max_long)
 
-for i in range(n+1):
-    generate('', i)
+# for i in range(n+1):
+generate('', n)
