@@ -1,29 +1,19 @@
-inp_f = open("homework.inp")
-out_f = open("homework.out", "w")
+input_file = open("homework.inp")
+output_file = open("homework.out","w")
 
-n = int(inp_f.readline())
-a = list(map(int, inp_f.readline().split()))
+# Input
+n = int(input_file.readline())
+a = [int(x) for x in input_file.readline().strip().split()]
 
-def check_sum(start, a):
-    sum = 0
-    cnt = 0
-    for i in range(start, len(a)):
-        if cnt <3:
-            sum += a[i]
-            cnt += 1
-        else:
-            i += 2
-            print("i+=2")
-            cnt = 0
-    return sum
+#Initialize
+f = [0]*(n+1)
+f[0] = a[0]
+f[1] = a[1]
+f[2] = a[2]
 
-amin = sum(a)
-for i in range(0, 3):
-    amin = min(check_sum(i, a), amin)
-print(amin)
+for i in range(3, n):
+    f[i] = min(f[i-1], f[i-2], f[i-3]) + a[i]
 
-"""
-
-3 2 1 1 2 3 1 3 2 1
-1 2 
-"""
+output_file.write(str(min(f[n-1], f[n-2], f[n-3])))
+input_file.close()
+output_file.close()
